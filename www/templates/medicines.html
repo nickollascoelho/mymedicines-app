@@ -1,0 +1,17 @@
+<ion-view view-title="Medicines" name="medicines-tab">
+  <ion-nav-buttons side="right">
+    <button class="button icon-left ion-log-out button-positive" ng-click="$parent.ctrl.logout()" alt="Logout" title="Logout"></button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <div class="row">
+      <div class="col text-center">
+      <h3 class="title">Olá {{user.name}}!</h3>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item class="item" ng-repeat="med in user.medicines" type="item-text-wrap" ng-click="teste(med.id)">
+        <h2>{{med.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
